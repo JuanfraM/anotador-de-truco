@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import logo from '../assets/logo.svg';
 import '../assets/components/LandingPage.css';
 
@@ -18,4 +19,4 @@ class LandingPage extends Component {
   }
 }
 
-export default (LandingPage);
+export default connect()(LandingPage);
