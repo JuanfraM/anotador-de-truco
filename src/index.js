@@ -1,16 +1,16 @@
+/* eslint-disable import/default */
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
-import registerServiceWorker from './registerServiceWorker';
+import { sessionService } from 'redux-react-session';
 
-import './index.css';
 import App from './components/App';
 import configureStore from './store/configureStore';
-
-registerServiceWorker();
+import './styles/styles.scss';
 
 const store = configureStore();
+sessionService.initSessionService(store);
 
 const renderApp = (Component) => {
   render(
@@ -18,7 +18,7 @@ const renderApp = (Component) => {
       <div>
         <AppContainer>
           <Component />
-        </AppContainer>
+        </AppContainer>,
       </div>
     </Provider>,
     document.getElementById('app')
