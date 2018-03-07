@@ -4,10 +4,14 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import { sessionService } from 'redux-react-session';
+import 'foundation-sites/dist/css/foundation.min.css';
+import 'foundation-sites/dist/css/foundation-float.min.css';
+import 'foundation-sites/dist/css/foundation-rtl.min.css';
+import 'foundation-sites/dist/css/foundation-prototype.min.css';
 
 import App from './components/App';
 import configureStore from './store/configureStore';
-import './styles/styles.scss';
+import './styles/styles.css';
 
 const store = configureStore();
 sessionService.initSessionService(store);
