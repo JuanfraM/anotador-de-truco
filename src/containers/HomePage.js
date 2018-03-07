@@ -4,12 +4,11 @@ import { Column, Row, Colors, Button, Sizes, Label } from 'react-foundation';
 import Separator from '../components/common/Separator';
 import logo from '../assets/logo.svg';
 import '../assets/components/LandingPage.css';
-import style from './HomePage.css'
 
 class HomePage extends Component {
   render() {
     return (
-      <div className={style.homePage}>
+      <div className="homePage">
         <Row className="display">
           <Column large={6}  offsetOnLarge={3}>
             <Row className="display">
