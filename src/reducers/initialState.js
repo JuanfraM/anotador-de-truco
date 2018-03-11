@@ -2,5 +2,6 @@
 export default {
   auth: {
     loading: false,
-  }
+  },
+  score: 0,
 };

@@ -12,5 +12,14 @@
     .left {
       border-right: 1px solid $black;
     }
+
+    .rowButtons {
+      width: 100%;
+
+      .columnButtons {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
   }
 }
