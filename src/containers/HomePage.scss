@@ -1,0 +1,16 @@
+@import '../assets/styles/variables.scss';
+
+.homePage {
+  margin-top: 4rem;
+
+  .columnCenter {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rowTable {
+    .left {
+      border-right: 1px solid $black;
+    }
+  }
+}

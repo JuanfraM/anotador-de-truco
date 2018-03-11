@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Column, Row, Colors, Button, Sizes } from 'react-foundation';
 
 import logo from '../assets/logo.svg';
-import '../assets/components/LandingPage.css';
+import '../assets/components/LandingPage.scss';
 import history from '../utils/history';
 
 class LandingPage extends Component {
