@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Column, Row, Colors, Button, Sizes, Label } from 'react-foundation';
+import PropTypes from 'prop-types';
 
 import Score from './Score';
 import ScoreNumber from './ScoreNumber';
@@ -13,12 +14,12 @@ class ScoreContainer extends Component {
     this.onClickDecrement = this.onClickDecrement.bind(this);
   }
 
-  onClickInrement() {
-    this.props.increment();
+  onClickInrement(count) {
+    this.props.increment(count);
   }
 
-  onClickDecrement() {
-    this.props.decrement();
+  onClickDecrement(count) {
+    this.props.decrement(count);
   }
 
   render() {
@@ -31,13 +32,25 @@ class ScoreContainer extends Component {
         </Row>
         <Row className="display rowButtons">
           <Column medium={12} className="columnButtons">
-            <Button size={Sizes.LARGE} color={Colors.PRIMARY} onClick={this.onClickInrement}>+1</Button>
-            <Button size={Sizes.LARGE} color={Colors.PRIMARY} onClick={this.onClickDecrement}>-1</Button>
+            <Button size={Sizes.MEDIUM} color={Colors.PRIMARY} onClick={() => this.onClickInrement(1)}>+1</Button>
+            <Button size={Sizes.MEDIUM} color={Colors.PRIMARY} onClick={() => this.onClickDecrement(1)}>-1</Button>
+          </Column>
+          <Column medium={6} offsetOnMedium={3} className="columnButtons">
+            <Button size={Sizes.LARGE} color={Colors.PRIMARY} onClick={() => this.onClickInrement(5)}>+5</Button>
           </Column>
         </Row>
       </Column>
     );
   }
 }
+
+const { func, bool, number } = PropTypes;
+
+ScoreContainer.propTypes = {
+  increment: func.isRequired,
+  decrement: func.isRequired,
+  left: bool.isRequired,
+  score: number.isRequired,
+};
 
 export default ScoreContainer;
