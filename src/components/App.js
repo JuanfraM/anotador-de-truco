@@ -30,10 +30,10 @@ App.propTypes = {
   user: object.isRequired
 };
 
-const mapState = state => ({
+const mapStateToProps = state => ({
   checked: state.session.checked,
   authenticated: state.session.authenticated,
   user: state.session.user
 });
 
-export default connect(mapState)(App);
+export default connect(mapStateToProps)(App);

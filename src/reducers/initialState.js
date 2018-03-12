@@ -4,4 +4,8 @@ export default {
     loading: false,
   },
   score: 0,
+  names: {
+    ellos: 'Ellos',
+    nosotros: 'Nosotros',
+  }
 };
