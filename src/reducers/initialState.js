@@ -3,7 +3,10 @@ export default {
   auth: {
     loading: false,
   },
-  score: 0,
+  score: {
+    left: 0,
+    right: 0
+  },
   names: {
     ellos: 'Ellos',
     nosotros: 'Nosotros',
