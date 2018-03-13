@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Column, Row, Breadcrumbs, BreadcrumbItem, Button, Colors } from 'react-foundation';
 
 import BreadCrumb from './BreadCrumb';
+import history from '../../utils/history';
 import './Header.scss';
 
 const Header = ({resetGame, changeGameState, gamePlaying}) => {
@@ -10,6 +11,7 @@ const Header = ({resetGame, changeGameState, gamePlaying}) => {
 const reset = () => {
   resetGame();
   changeGameState();
+  history.push('/');
 }
 
 return (
