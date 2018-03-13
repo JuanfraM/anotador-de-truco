@@ -16,3 +16,6 @@ export const INCREMENT_LEFT = 'INCREMENT_LEFT';
 export const INCREMENT_RIGHT = 'INCREMENT_RIGHT';
 export const DECREMENT_LEFT = 'DECREMENT_LEFT';
 export const DECREMENT_RIGHT = 'DECREMENT_RIGHT';
+
+// Names
+export const CHANGE_NAMES = 'CHANGE_NAMES';

@@ -4,7 +4,7 @@ import { Column, Row } from 'react-foundation';
 import Separator from '../components/common/Separator';
 import PlayerNamesContainer from './PlayerNamesContainer';
 import ScoreContainer from './ScoreContainer';
-import '../assets/components/LandingPage.scss';
+import './LandingPage.scss';
 import './HomePage.scss';
 
 const HomePage = () => (
