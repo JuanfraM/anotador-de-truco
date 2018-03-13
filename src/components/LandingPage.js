@@ -51,42 +51,35 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-
-        <Row className="display selectNamesRow">
-          <Column medium={6}  offsetOnMedium={3}>
-            <form onSubmit={this.onSubmit}>
-              <div className="grid-container">
-                <div className="grid-x grid-padding-x">
-                  <div className="medium-6 cell">
-                    <label>Nombre:
-                      <input
-                        type="text"
-                        value={this.state.ellos}
-                        onChange={evt => this.updateInputValueEllos(evt)}
-                      />
-                    </label>
-                  </div>
-                  <div className="medium-6 cell">
-                    <label>Nombre:
-                      <input
-                        type="text"
-                        value={this.state.nosotros}
-                        onChange={evt => this.updateInputValueNosotros(evt)}
-                      />
-                    </label>
-                  </div>
+      <Row className="display selectNamesRow">
+        <Column medium={6}  offsetOnMedium={3}>
+          <form onSubmit={this.onSubmit}>
+            <div className="grid-container">
+              <div className="grid-x grid-padding-x">
+                <div className="medium-6 cell">
+                  <label>Nombre:
+                    <input
+                      type="text"
+                      value={this.state.ellos}
+                      onChange={evt => this.updateInputValueEllos(evt)}
+                    />
+                  </label>
+                </div>
+                <div className="medium-6 cell">
+                  <label>Nombre:
+                    <input
+                      type="text"
+                      value={this.state.nosotros}
+                      onChange={evt => this.updateInputValueNosotros(evt)}
+                    />
+                  </label>
                 </div>
               </div>
-               <input type="submit" className="button" value="Start" />
-            </form>
-          </Column>
-        </Row>
-      </div>
+            </div>
+             <input type="submit" className="button" value="Start" />
+          </form>
+        </Column>
+      </Row>
     );
   }
 }

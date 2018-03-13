@@ -19,3 +19,7 @@ export const decrementRight = (count = 0) => ({
   count,
   type: types.DECREMENT_RIGHT
 });
+
+export const resetGame = () => ({
+  type: types.RESET_GAME
+});

@@ -17,6 +17,9 @@ export default  (state = initialState.score, action) => {
       const newScore = (state.right - count < 0) ? 0 : state.right - count;
       return {...state, right: newScore}
     }
+    case types.RESET_GAME: {
+      return {...state, right: 0, left: 0}
+    }
     default:
       return state
   }

@@ -1,0 +1,41 @@
+@import '../../assets/styles/_settings-foundation.scss';
+
+.app-header {
+  background-color: $black;
+  height: 8rem;
+  padding: 1rem;
+  color: $white;
+
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+
+  .app-title {
+    font-size: 2.5em;
+  }
+
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .row-menu {
+    .breadcrumbs {
+      line-height: 1.5;
+
+      li {
+        font-size: 1.1em;
+        color: $primary-color;
+
+        &.disabled {
+          a {
+            color: $white;
+            cursor: none;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

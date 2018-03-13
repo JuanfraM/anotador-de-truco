@@ -8,9 +8,9 @@ import 'foundation-sites/dist/css/foundation.min.css';
 import 'foundation-sites/dist/css/foundation-float.min.css';
 import 'foundation-sites/dist/css/foundation-rtl.min.css';
 import 'foundation-sites/dist/css/foundation-prototype.min.css';
-import './assets/styles/_variables.scss';
-import './assets/styles/styles.scss';
 
+import './assets/styles/_settings-foundation.scss';
+import './assets/styles/styles.scss';
 import App from './components/App';
 import configureStore from './store/configureStore';
 

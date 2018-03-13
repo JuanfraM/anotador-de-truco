@@ -4,21 +4,25 @@ import { ConnectedRouter } from 'react-router-redux';
 import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 
+import HeaderContainer from '../containers/HeaderContainer';
 import history from '.././utils/history';
 import routes from '../routes';
 
 const App = ({ authenticated, checked, user }) => (
   <div className="app-container">
-    <ConnectedRouter history={history}>
-      { checked && (!authenticated || !user.isEmpty()) &&
-        <Switch>
-          {routes.map((route, index) =>
-            <Route
-              {...route}/>
-          )}
-        </Switch>
-      }
-    </ConnectedRouter>
+    <div className="App">
+      <HeaderContainer />
+      <ConnectedRouter history={history}>
+        { checked && (!authenticated || !user.isEmpty()) &&
+          <Switch>
+            {routes.map((route, index) =>
+              <Route
+                {...route}/>
+            )}
+          </Switch>
+        }
+      </ConnectedRouter>
+    </div>
   </div>
 );
 
