@@ -11,6 +11,9 @@ export const SIGN_UP_FAILURE = 'SIGN_UP_FAILURE';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
 
+// Game State
+export const CHANGE_GAME_STATE = 'CHANGE_GAME_STATE';
+
 // Counter
 export const INCREMENT_LEFT = 'INCREMENT_LEFT';
 export const INCREMENT_RIGHT = 'INCREMENT_RIGHT';

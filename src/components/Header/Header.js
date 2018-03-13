@@ -5,10 +5,11 @@ import { Column, Row, Breadcrumbs, BreadcrumbItem, Button, Colors } from 'react-
 import BreadCrumb from './BreadCrumb';
 import './Header.scss';
 
-const Header = ({resetGame}) => {
+const Header = ({resetGame, changeGameState, gamePlaying}) => {
 
 const reset = () => {
   resetGame();
+  changeGameState();
 }
 
 return (
@@ -23,16 +24,20 @@ return (
         <BreadCrumb />
       </Column>
       <Column medium={4}>
-        <Button color={Colors.ALERT} onClick={() => reset()}>Reiniciar Juego</Button>
+        {
+          gamePlaying && <Button color={Colors.ALERT} onClick={() => reset()}>Reiniciar Juego</Button>
+        }
       </Column>
     </Row>
   </header>
 )};
 
-const { func } = PropTypes;
+const { func, string } = PropTypes;
 
 Header.propTypes = {
   resetGame: func,
+  changeGameState: func.isRequired,
+  gamePlaying: string.isRequired,
 };
 
 export default Header;

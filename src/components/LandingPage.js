@@ -46,6 +46,9 @@ class LandingPage extends Component {
 
   onSubmit() {
     this.props.changeNames(this.state);
+    if (!this.props.gamePlaying) {
+      this.props.changeGameState();
+    }
     history.push('/home');
   }
 
@@ -76,7 +79,11 @@ class LandingPage extends Component {
                 </div>
               </div>
             </div>
-             <input type="submit" className="button" value="Start" />
+             <input
+               type="submit"
+               className="button"
+               value={this.props.gamePlaying ? "Seguir Jugando" : "Comenzar"}
+             />
           </form>
         </Column>
       </Row>
@@ -84,12 +91,14 @@ class LandingPage extends Component {
   }
 }
 
-const { string, func } = PropTypes;
+const { string, func, bool } = PropTypes;
 
 LandingPage.propTypes = {
   ellos: string.isRequired,
   nosotros: string.isRequired,
   changeNames: func.isRequired,
+  gamePlaying: bool.isRequired,
+  changeGameState: func.isRequired,
 };
 
 export default LandingPage;
