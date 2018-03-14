@@ -54,7 +54,7 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <Row className="display selectNamesRow">
+      <Row className="display selectSettings">
         <Column medium={6}  offsetOnMedium={3}>
           <form onSubmit={this.onSubmit}>
             <div className="grid-container">
@@ -79,6 +79,13 @@ class LandingPage extends Component {
                 </div>
               </div>
             </div>
+            <fieldset class="large-6 cell selectScore">
+              <legend>Elige puntuacion final</legend>
+              <input type="radio" name="selectScore" value="30" id="argentinianScore" required />
+              <label for="argentinianScore">15 y 15</label>
+              <input type="radio" name="selectScore" value="40" id="uruguayanScore" checked/>
+              <label for="uruguayanScore">20 y 20</label>
+            </fieldset>
              <input
                type="submit"
                className="button"

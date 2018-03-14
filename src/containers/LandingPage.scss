@@ -6,6 +6,15 @@
   font-size: large;
 }
 
-.selectNamesRow {
+.selectSettings {
   margin-top: 5rem;
+
+  .selectScore {
+    margin: 2rem 0;
+
+    legend {
+      font-size: 1.2em;
+      margin-bottom: 1rem;
+    }
+  }
 }

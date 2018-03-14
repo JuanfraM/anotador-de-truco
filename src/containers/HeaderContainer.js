@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { resetGame } from '../actions/counter';
-import { changeGameState } from '../actions/gameState';
+import { changeGameState } from '../actions/gameSettings';
 import Header from '../components/Header/Header';
 
 const mapStateToProps = state => ({

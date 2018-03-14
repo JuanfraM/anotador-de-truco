@@ -5,7 +5,7 @@ import { sessionReducer } from 'redux-react-session';
 import authReducer from './authReducer';
 import score from './counter';
 import names from './names';
-import gamePlaying from './gameState';
+import gamePlaying from './gameSettings';
 
 const rootReducer = combineReducers({
   form: formReducer,

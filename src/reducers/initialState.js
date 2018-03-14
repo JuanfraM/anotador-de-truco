@@ -4,6 +4,7 @@ export default {
     loading: false,
   },
   gamePlaying: false,
+  finalScore: 40,
   score: {
     left: 0,
     right: 0

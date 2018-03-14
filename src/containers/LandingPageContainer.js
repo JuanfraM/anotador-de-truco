@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { changeNames } from '../actions/names';
-import { changeGameState } from '../actions/gameState';
+import { changeGameState } from '../actions/gameSettings';
 import LandingPage from '../components/LandingPage';
 
 const mapStateToProps = state => ({
