@@ -54,9 +54,16 @@ const displayImagesBad = () => {
   const scoreBad = (score <= halfScore) ? score : halfScore;
   calc(numbersBad, scoreBad);
 
-  const imagesBad = numbersBad.map((number, i) => (
-    <Thumbnail key={i} src={number} alt={`number${i}`}/>
-  ));
+  const imagesBad = numbersBad.map((number, i) => {
+    if (isScoreGood && i === numbersBad.length - 1) {
+      return (
+        <Thumbnail key={i} src={number} alt={`number${i}`} className="last"/>
+      );
+    }
+    return (
+      <Thumbnail key={i} src={number} alt={`number${i}`}/>
+    )
+  });
 
   return imagesBad;
 };

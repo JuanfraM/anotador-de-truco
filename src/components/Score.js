@@ -26,7 +26,7 @@ class ScoreContainer extends Component {
     const { score, left, increment, decrement } = this.props;
 
     return (
-      <Column medium={6} className={`${left ? "left" : "right"}`} >
+      <Column medium={6} className={`${left ? "left" : "right"} columnScore`} >
         <Row className="display">
           <ScoreNumber score={score} />
         </Row>

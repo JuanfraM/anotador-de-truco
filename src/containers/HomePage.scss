@@ -1,28 +1,35 @@
 @import '../assets/styles/_settings-foundation.scss';
 .homePage {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
   .columnCenter {
     display: flex;
     justify-content: center;
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
   }
 
   .rowTable {
-    .left {
-      border-right: 1px solid $black;
-    }
+    .columnScore {
+      height: 75vh;
+      position: relative;
 
-    .rowButtons {
-      width: 100%;
-      margin-top: 4rem;
+      &.left {
+        border-right: 1px solid $black;
+      }
 
-      .columnButtons {
-        display: flex;
-        justify-content: space-around;
+      .rowButtons {
+        bottom: 0;
+        margin-top: 4rem;
+        position: absolute;
+        width: 100%;
+
+        .columnButtons {
+          display: flex;
+          justify-content: space-around;
+        }
       }
     }
   }

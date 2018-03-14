@@ -22,9 +22,13 @@
     align-items: center;
 
     .thumbnail {
-      width: 4rem;
-      height: 5rem;
+      width: 2.7rem;
+      height: 2.7rem;
       order: 1;
+
+      &.last {
+        margin-bottom: 0;
+      }
     }
   }
 }
