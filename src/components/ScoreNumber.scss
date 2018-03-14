@@ -1,11 +1,30 @@
-.scoreColumn {
+.row-score-number {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1rem;
   margin-top: 1rem;
+
+  .separator {
+    width: 60%;
+    margin: 1rem auto;
+  }
 
   .score {
     width: 100%;
     height: 4rem;
     font-size: 3em;
     text-align: center;
+  }
+
+  .column-score-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .thumbnail {
+      width: 4rem;
+      height: 5rem;
+      order: 1;
+    }
   }
 }
