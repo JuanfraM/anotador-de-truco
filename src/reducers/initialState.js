@@ -3,8 +3,10 @@ export default {
   auth: {
     loading: false,
   },
-  gamePlaying: false,
-  finalScore: 40,
+  settings: {
+    gamePlaying: false,
+    finalScore: 40,
+  },
   score: {
     left: 0,
     right: 0

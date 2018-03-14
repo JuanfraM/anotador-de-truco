@@ -8,7 +8,7 @@ import LandingPage from '../components/LandingPage';
 const mapStateToProps = state => ({
   ellos: state.names.ellos,
   nosotros: state.names.nosotros,
-  gamePlaying: state.gamePlaying,
+  gamePlaying: state.settings.gamePlaying,
 });
 
 const mapDispatchToProps = (dispatch) => ({

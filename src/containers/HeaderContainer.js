@@ -6,7 +6,7 @@ import { changeGameState } from '../actions/gameSettings';
 import Header from '../components/Header/Header';
 
 const mapStateToProps = state => ({
-  gamePlaying: state.gamePlaying,
+  gamePlaying: state.settings.gamePlaying,
 });
 
 const mapDispatchToProps = (dispatch) => ({
