@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Column, Row, Breadcrumbs, BreadcrumbItem, Button, Colors } from 'react-foundation';
+import { Column, Row, Breadcrumbs, BreadcrumbItem, Button, Colors, Sizes } from 'react-foundation';
 
 import BreadCrumb from './BreadCrumb';
 import history from '../../utils/history';
@@ -27,7 +27,7 @@ return (
       </Column>
       <Column medium={4}>
         {
-          gamePlaying && <Button color={Colors.ALERT} onClick={() => reset()}>Reiniciar Juego</Button>
+          gamePlaying && <Button color={Colors.ALERT} size={Sizes.SMALL} onClick={() => reset()}>Reiniciar Juego</Button>
         }
       </Column>
     </Row>
