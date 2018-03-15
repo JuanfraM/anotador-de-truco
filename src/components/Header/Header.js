@@ -34,12 +34,12 @@ return (
   </header>
 )};
 
-const { func, string } = PropTypes;
+const { func, string, bool } = PropTypes;
 
 Header.propTypes = {
   resetGame: func,
   changeGameState: func.isRequired,
-  gamePlaying: string.isRequired,
+  gamePlaying: bool.isRequired,
 };
 
 export default Header;

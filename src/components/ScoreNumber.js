@@ -11,14 +11,13 @@ import number3 from '../assets/images/number3.jpg';
 import number4 from '../assets/images/number4.jpg';
 import number5 from '../assets/images/number5.jpg';
 
-const ScoreNumber = ({score}) => {
+const ScoreNumber = ({score, finalScore}) => {
 
 let countOfComplete = 0;
 let remainder = 0;
 const numbersGood = [];
 const numbersBad = [];
-const maxScore = 40;
-const halfScore = 20;
+const halfScore = finalScore / 2;
 let isScoreGood = score > halfScore;
 
 const calc = (numbers, partialScore) => {
@@ -108,6 +107,7 @@ const { number } = PropTypes;
 
 ScoreNumber.propTypes = {
   score: number.isRequired,
+  finalScore: number.isRequired,
 };
 
 export default ScoreNumber;

@@ -23,12 +23,12 @@ class ScoreContainer extends Component {
   }
 
   render() {
-    const { score, left, increment, decrement } = this.props;
+    const { score, left, increment, decrement, finalScore } = this.props;
 
     return (
       <Column medium={6} className={`${left ? "left" : "right"} columnScore`} >
         <Row className="display">
-          <ScoreNumber score={score} />
+          <ScoreNumber score={score} finalScore={finalScore} />
         </Row>
         <Row className="display rowButtons">
           <Column medium={12} className="columnButtons">
@@ -51,6 +51,7 @@ ScoreContainer.propTypes = {
   decrement: func.isRequired,
   left: bool.isRequired,
   score: number.isRequired,
+  finalScore: number.isRequired,
 };
 
 export default ScoreContainer;

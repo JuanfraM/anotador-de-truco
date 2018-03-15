@@ -8,9 +8,9 @@ const mapStateToProps = (state, ownProps) => (checkStateLeft(state, ownProps));
 
 const checkStateLeft = (state, ownProps) => {
   if (ownProps.left) {
-    return { score: state.score.left }
+    return { score: state.score.left, finalScore: state.settings.finalScore };
   }
-  return { score: state.score.right };
+  return { score: state.score.right, finalScore: state.settings.finalScore };
 }
 
 const checkDispatchLeft = (dispatch, ownProps) => {
