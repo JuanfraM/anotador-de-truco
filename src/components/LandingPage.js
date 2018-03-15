@@ -12,9 +12,10 @@ class LandingPage extends Component {
 
     this.state = {
       ellos: 'Ellos',
-      nosotros: 'Nosotros'
+      nosotros: 'Nosotros',
+      finalScore: 40,
     };
-    this.onClickStart = this.onClickStart.bind(this);
+
     this.onSubmit = this.onSubmit.bind(this);
     this.updateInputValueEllos = this.updateInputValueEllos.bind(this);
     this.updateInputValueNosotros = this.updateInputValueNosotros.bind(this);
@@ -26,10 +27,6 @@ class LandingPage extends Component {
       ellos,
       nosotros
     });
-  }
-
-  onClickStart() {
-    history.push('/home');
   }
 
   updateInputValueEllos(evt) {
@@ -44,8 +41,15 @@ class LandingPage extends Component {
     });
   }
 
+  updateValueFinalScore(evt) {
+    this.setState({
+      finalScore: Number(evt.target.value)
+    });
+  }
+
   onSubmit() {
     this.props.changeNames(this.state);
+    this.props.updateFinalScore(this.state.finalScore);
     if (!this.props.gamePlaying) {
       this.props.changeGameState();
     }
@@ -81,9 +85,22 @@ class LandingPage extends Component {
             </div>
             <fieldset className="large-6 cell selectScore">
               <legend>Elige puntuacion final</legend>
-              <input type="radio" name="selectScore" value="30" id="argentinianScore" required />
+              <input
+                type="radio"
+                name="selectScore"
+                value="30"
+                id="argentinianScore"
+                onChange={evt => this.updateValueFinalScore(evt)}
+                required
+              />
               <label htmlFor="argentinianScore">15 y 15</label>
-              <input type="radio" name="selectScore" value="40" id="uruguayanScore" defaultChecked/>
+              <input
+                type="radio"
+                name="selectScore"
+                value="40"
+                id="uruguayanScore"
+                onChange={evt => this.updateValueFinalScore(evt)}
+                defaultChecked/>
               <label htmlFor="uruguayanScore">20 y 20</label>
             </fieldset>
              <input
@@ -106,6 +123,7 @@ LandingPage.propTypes = {
   changeNames: func.isRequired,
   gamePlaying: bool.isRequired,
   changeGameState: func.isRequired,
+  updateFinalScore: func.isRequired,
 };
 
 export default LandingPage;

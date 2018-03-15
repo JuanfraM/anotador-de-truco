@@ -6,6 +6,9 @@ export default  (state = initialState.settings, action) => {
       const gamePlaying = !state.gamePlaying;
       return { ...state, gamePlaying: gamePlaying };
     }
+    case 'UPDATE_FINAL_SCORE': {
+      return { ...state, finalScore: action.finalScore };
+    }
     default:
       return state
   }

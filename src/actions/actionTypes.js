@@ -13,7 +13,7 @@ export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
 
 // Game Settings
 export const CHANGE_GAME_STATE = 'CHANGE_GAME_STATE';
-export const SELECT_FINAL_SCORE = 'SELECT_FINAL_SCORE';
+export const UPDATE_FINAL_SCORE = 'UPDATE_FINAL_SCORE';
 
 // Counter
 export const INCREMENT_LEFT = 'INCREMENT_LEFT';

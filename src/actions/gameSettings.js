@@ -4,7 +4,7 @@ export const changeGameState = () => ({
   type: types.CHANGE_GAME_STATE
 });
 
-export const selectFinalScore = (score) => ({
+export const updateFinalScore = (score) => ({
   finalScore: score,
-  type: types.SELECT_FINAL_SCORE
+  type: types.UPDATE_FINAL_SCORE
 });

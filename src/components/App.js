@@ -15,8 +15,8 @@ const App = ({ authenticated, checked, user }) => (
       <ConnectedRouter history={history}>
         { checked && (!authenticated || !user.isEmpty()) &&
           <Switch>
-            {routes.map((route, index) =>
-              <Route
+            {routes.map((route, i) =>
+              <Route key={i}
                 {...route}/>
             )}
           </Switch>

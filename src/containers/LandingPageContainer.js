@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { changeNames } from '../actions/names';
-import { changeGameState } from '../actions/gameSettings';
+import { changeGameState, updateFinalScore } from '../actions/gameSettings';
 import LandingPage from '../components/LandingPage';
 
 const mapStateToProps = state => ({
@@ -14,6 +14,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => ({
   changeNames: names => dispatch(changeNames(names)),
   changeGameState: names => dispatch(changeGameState()),
+  updateFinalScore: score => dispatch(updateFinalScore(score)),
 });
 
 const LandingPageContainer = connect(
