@@ -61,30 +61,27 @@ class LandingPage extends Component {
       <Row className="display selectSettings">
         <Column medium={6}  offsetOnMedium={3}>
           <form onSubmit={this.onSubmit}>
+            <label>Elige Nombres</label>
             <div className="grid-container">
               <div className="grid-x grid-padding-x">
                 <div className="medium-6 cell">
-                  <label>Nombre:
-                    <input
-                      type="text"
-                      value={this.state.ellos}
-                      onChange={evt => this.updateInputValueEllos(evt)}
-                    />
-                  </label>
+                  <input
+                    type="text"
+                    value={this.state.ellos}
+                    onChange={evt => this.updateInputValueEllos(evt)}
+                  />
                 </div>
                 <div className="medium-6 cell">
-                  <label>Nombre:
-                    <input
-                      type="text"
-                      value={this.state.nosotros}
-                      onChange={evt => this.updateInputValueNosotros(evt)}
-                    />
-                  </label>
+                  <input
+                    type="text"
+                    value={this.state.nosotros}
+                    onChange={evt => this.updateInputValueNosotros(evt)}
+                  />
                 </div>
               </div>
             </div>
             <fieldset className="large-6 cell selectScore">
-              <legend>Elige puntuacion final</legend>
+              <legend>Elige puntuación final</legend>
               <input
                 type="radio"
                 name="selectScore"
@@ -93,7 +90,7 @@ class LandingPage extends Component {
                 onChange={evt => this.updateValueFinalScore(evt)}
                 required
               />
-              <label htmlFor="argentinianScore">15 y 15</label>
+            <label htmlFor="argentinianScore">30</label>
               <input
                 type="radio"
                 name="selectScore"
@@ -101,7 +98,7 @@ class LandingPage extends Component {
                 id="uruguayanScore"
                 onChange={evt => this.updateValueFinalScore(evt)}
                 defaultChecked/>
-              <label htmlFor="uruguayanScore">20 y 20</label>
+              <label htmlFor="uruguayanScore">40</label>
             </fieldset>
              <input
                type="submit"
