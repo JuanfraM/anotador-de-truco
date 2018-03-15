@@ -1,6 +1,5 @@
 import LandingPageContainer from './containers/LandingPageContainer';
 import HomePage from './containers/HomePage';
-import NotFoundPage from './containers/NotFoundPage';
 import { routesPaths } from './constants/routesPaths';
 
 const routes = [
@@ -14,9 +13,6 @@ const routes = [
   {
     path: routesPaths.home,
     component: HomePage
-  },
-  {
-    component: NotFoundPage
   }
 ];
 

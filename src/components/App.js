@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'react-router-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import HeaderContainer from '../containers/HeaderContainer';
 import history from '.././utils/history';
@@ -17,6 +17,7 @@ const App = () => (
             <Route key={i}
               {...route}/>
           )}
+          <Redirect to="/" />
         </Switch>
       </ConnectedRouter>
     </div>
