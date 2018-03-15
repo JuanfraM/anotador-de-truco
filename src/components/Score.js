@@ -14,12 +14,12 @@ class ScoreContainer extends Component {
     this.onClickDecrement = this.onClickDecrement.bind(this);
   }
 
-  onClickInrement(count) {
-    this.props.increment(count);
+  onClickInrement(count, finalScore) {
+    this.props.increment(count, finalScore);
   }
 
-  onClickDecrement(count) {
-    this.props.decrement(count);
+  onClickDecrement(count, finalScore) {
+    this.props.decrement(count, finalScore);
   }
 
   render() {
@@ -32,11 +32,24 @@ class ScoreContainer extends Component {
         </Row>
         <Row className="display rowButtons">
           <Column medium={12} className="columnButtons">
-            <Button size={Sizes.MEDIUM} color={Colors.PRIMARY} onClick={() => this.onClickInrement(1)}>+1</Button>
-            <Button size={Sizes.MEDIUM} color={Colors.PRIMARY} onClick={() => this.onClickDecrement(1)}>-1</Button>
-          </Column>
-          <Column medium={6} offsetOnMedium={3} className="columnButtons">
-            <Button size={Sizes.LARGE} color={Colors.PRIMARY} onClick={() => this.onClickInrement(5)}>+5</Button>
+            <Button
+              size={Sizes.MEDIUM}
+              color={Colors.PRIMARY}
+              onClick={() => this.onClickInrement(1, finalScore)}>
+                +1
+            </Button>
+            <Button
+              size={Sizes.LARGE}
+              color={Colors.PRIMARY}
+              onClick={() => this.onClickInrement(5, finalScore)}>
+                +5
+            </Button>
+            <Button
+              size={Sizes.MEDIUM}
+              color={Colors.PRIMARY}
+              onClick={() => this.onClickDecrement(1, finalScore)}>
+                -1
+            </Button>
           </Column>
         </Row>
       </Column>

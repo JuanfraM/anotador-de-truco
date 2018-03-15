@@ -16,13 +16,13 @@ const checkStateLeft = (state, ownProps) => {
 const checkDispatchLeft = (dispatch, ownProps) => {
   if (ownProps.left) {
     return {
-      increment: count => dispatch(incrementLeft(count)),
-      decrement: count => dispatch(decrementLeft(count)),
+      increment: (count, finalScore) => dispatch(incrementLeft(count, finalScore)),
+      decrement: (count, finalScore) => dispatch(decrementLeft(count, finalScore)),
     }
   }
   return {
-    increment: count => dispatch(incrementRight(count)),
-    decrement: count => dispatch(decrementRight(count)),
+    increment: (count, finalScore) => dispatch(incrementRight(count, finalScore)),
+    decrement: (count, finalScore) => dispatch(decrementRight(count, finalScore)),
   }
 }
 
