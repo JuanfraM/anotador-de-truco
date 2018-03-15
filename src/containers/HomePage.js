@@ -10,7 +10,7 @@ import './HomePage.scss';
 const HomePage = () => (
   <div className="homePage">
     <Row className="display">
-      <Column large={6}  offsetOnLarge={3}>
+      <Column small={12} medium={6} offsetOnMedium={3}>
         <PlayerNamesContainer />
         <Separator/>
         <Row className="display rowTable">

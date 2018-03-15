@@ -84,8 +84,8 @@ const displayImagesGood = () => {
 };
 
 return (
-  <Row upOnMedium={1} className="row-score-number">
-   <Column isColumn className="column-score-number">
+  <Row upOnSmall={1} className="row-score-number">
+   <Column iscolumn className="column-score-number">
      {
         displayImagesBad()
     }

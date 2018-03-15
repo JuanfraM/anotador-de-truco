@@ -26,12 +26,12 @@ class ScoreContainer extends Component {
     const { score, left, increment, decrement, finalScore } = this.props;
 
     return (
-      <Column medium={6} className={`${left ? "left" : "right"} columnScore`} >
+      <Column small={6} className={`${left ? "left" : "right"} columnScore`} >
         <Row className="display">
           <ScoreNumber score={score} finalScore={finalScore} />
         </Row>
         <Row className="display rowButtons">
-          <Column medium={12} className="columnButtons">
+          <Column small={12} className="columnButtons">
             <Button
               size={Sizes.MEDIUM}
               color={Colors.PRIMARY}

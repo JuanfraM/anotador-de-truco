@@ -19,13 +19,13 @@ const PlayerNames = ({nameEllos, nameNosotros, scoreLeft, scoreRight, finalScore
 
   return (
     <Row className="display rowNames">
-      <Column medium={6} className="columnCenter">
+      <Column small={6} className="columnCenter">
         <h1>{nameEllos}</h1>
         <span className={`badge ${isScoreGood(scoreLeft) ? "success" : "alert"}`}>
           { calcScore(scoreLeft) }
         </span>
       </Column>
-      <Column medium={6} className="columnCenter">
+      <Column small={6} className="columnCenter">
         <h1>{nameNosotros}</h1>
         <span className={`badge ${isScoreGood(scoreRight) ? "success" : "alert"}`}>
           { calcScore(scoreRight) }

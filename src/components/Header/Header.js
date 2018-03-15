@@ -17,15 +17,15 @@ const reset = () => {
 return (
   <header className="app-header">
     <Row className="row-title">
-      <Column medium={12}>
+      <Column small={12}>
         <h1 className="app-title">Truco!</h1>
       </Column>
     </Row>
     <Row className="row-menu">
-      <Column medium={4}>
+      <Column small={6}>
         <BreadCrumb />
       </Column>
-      <Column medium={4}>
+      <Column small={6}>
         {
           gamePlaying && <Button color={Colors.ALERT} size={Sizes.SMALL} onClick={() => reset()}>Reiniciar Juego</Button>
         }
