@@ -1,7 +1,7 @@
 Anotador de Truco
 ==========
 
-Anotador de truco Uruguayo (40) y Argentino (300)
+Anotador de truco Uruguayo (40) y Argentino (30)
 
 Tecnologias y versiones
 --------------------
